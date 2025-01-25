@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_exam/view/onbording_page.dart/splash_page.dart';
+import 'package:flutter_exam/view/onbording_page/splash_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences storage;

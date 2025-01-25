@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_exam/res/color_app.dart';
-import 'package:flutter_exam/view/onbording_page.dart/onbording_page.dart';
+import 'package:flutter_exam/view/onbording_page/onbording_page.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
