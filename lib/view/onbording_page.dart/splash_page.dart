@@ -7,8 +7,13 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Tween<double> opasity = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    );
+
     Future.delayed(
-      const Duration(seconds: 4),
+      const Duration(seconds: 7),
       () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -16,18 +21,27 @@ class SplashPage extends StatelessWidget {
           )),
     );
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: ColorApp().primary,
-        ),
-        child: Center(
-          child: SizedBox(
-            width: 222,
-            height: 222,
-            child: Image.asset("asset/image/logo.png"),
-          ),
-        ),
+      body: TweenAnimationBuilder(
+        tween: opasity,
+        duration: const Duration(seconds: 5),
+        builder: (context, value, child) {
+          return Opacity(
+            opacity: value,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: ColorApp().primary,
+              ),
+              child: Center(
+                child: SizedBox(
+                  width: 222,
+                  height: 222,
+                  child: Image.asset("asset/image/logo.png"),
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }

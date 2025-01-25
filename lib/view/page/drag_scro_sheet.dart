@@ -51,7 +51,7 @@ class _DragScroSheetState extends State<DragScroSheet> {
                     SliverList.list(
                       children: [
                         RowAppbar(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.end,
                           txt: StringApp().Next7,
                         ),
                         InkWell(
